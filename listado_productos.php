@@ -4,28 +4,32 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $aProductos = array();
-$aProductos[] = array("nombre" => "Smart TV 55\" 4K UHD",
+$aProductos[] = array(
+    "nombre" => "Smart TV 55\" 4K UHD",
     "marca" => "Hitachi",
     "modelo" => "554KS20",
     "stock" => 60,
     "precio" => 58000
 );
-$aProductos[]= array("nombre"=> "samsung Galaxy A30 Blanco",
-            "marca"=> "Samsung",
-            "modelo"=> "Galaxy A30",
-            "stock"=> 0,
-            "precio"=> 22000
+$aProductos[] = array(
+    "nombre" => "samsung Galaxy A30 Blanco",
+    "marca" => "Samsung",
+    "modelo" => "Galaxy A30",
+    "stock" => 0,
+    "precio" => 22000
 );
-$aProductos[]= array("nombre" => "Aire acondicionado Split frio/calor surrey 2900f",
-            "marca"=> "surrey",
-            "modelo"=> "553ai35k",
-            "stock"=> 5,
-            "precio"=> 45000
+$aProductos[] = array(
+    "nombre" => "Aire acondicionado Split frio/calor surrey 2900f",
+    "marca" => "surrey",
+    "modelo" => "553ai35k",
+    "stock" => 5,
+    "precio" => 45000
 );
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,11 +41,11 @@ $aProductos[]= array("nombre" => "Aire acondicionado Split frio/calor surrey 290
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-12">
-            <h1 class="py-5">Listado de Productos</h1>
+            <div class="col-12 text-center">
+                <h1 class="py-5">Listado de Productos</h1>
             </div>
         </div>
-    </div>
+        </div>
         <div class="row">
             <div class="col-12">
                 <table class="table table-hover border">
@@ -57,12 +61,35 @@ $aProductos[]= array("nombre" => "Aire acondicionado Split frio/calor surrey 290
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?php echo $aProductos[0]["nombre"]; ?></td>
+                            <td><?php echo $aProductos[0]["marca"]; ?></td>
+                            <td><?php echo $aProductos[0]["modelo"]; ?></td>
+                            <td><?php echo $aProductos[0]["stock"] == 0 ? "no hay stock" : ($aProductos [0]["stock"] <= 10 ? "poco stock" : "hay stock"); ?> </td>
+                            <td><?php echo $aProductos[0]["precio"]; ?></td>
+                            <td><button class="btn btn-primary">Comprar</button></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><?php echo $aProductos[1]["nombre"]; ?></td>
+                            <td><?php echo $aProductos[1]["marca"]; ?></td>
+                            <td><?php echo $aProductos[1]["modelo"]; ?></td>
+                            <td><?php echo $aProductos[1]["stock"] > 10 ? "hay stock" : ($aProductos[1]["stock"] > 0 && $aProductos[1]["stock"] <= 10 ? "poco stock" : "no hay stock"); ?> </td>
+                            <td><?php echo $aProductos[1]["precio"]; ?></td>
+                            <td><button class="btn btn-primary">Comprar</button></td>
+
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td><?php echo $aProductos[2]["nombre"]; ?></td>
+                            <td><?php echo $aProductos[2]["marca"]; ?></td>
+                            <td><?php echo $aProductos[2]["modelo"]; ?></td>
+                            <td><?php echo $aProductos[2]["stock"] > 10 ? "hay stock" : ($aProductos[2]["stock"] > 0 && $aProductos[2]["stock"] <= 10 ? "poco stock" : "no hay stock"); ?> </td>
+                            <td><?php echo $aProductos[2]["precio"]; ?></td>
+                            <td><button class="btn btn-primary">Comprar</button></td>
+
+
                         </tr>
                     </tbody>
                 </table>
