@@ -3,11 +3,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$edad=17;
-if($edad>=18){
-    echo "Es mayor de edad";
+function unir( $cadena1 , $cadena2) {
+    return "$cadena1 $cadena2";
+
 }
-else {
-    echo"acceso denegado";
-}
+$resultado = unir ("El libro de la selva")
 ?> 
