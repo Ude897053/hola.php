@@ -2,6 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 $aProductos = array();
 $aProductos[] = array(
     "nombre" => "Smart TV 55\" 4K UHD",
@@ -69,7 +70,7 @@ $aProductos[] = array(
                        for($contador =0; $contador < count ($aProductos ); $contador++) { 
                        $sumatoriaPrecio += $aProductos [$contador]["precio"];
                        ?>
-                        <tr>
+                        <tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
                             <td><?php echo $aProductos[$contador]["nombre"]; ?></td>
                             <td><?php echo $aProductos[$contador]["marca"]; ?></td>
                             <td><?php echo $aProductos[$contador]["modelo"]; ?></td>
